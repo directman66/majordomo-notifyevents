@@ -17,7 +17,7 @@ class notifyevents extends module {
 */
 function notifyevents() {
   $this->name="notifyevents";
-  $this->title="notifyevents";
+  $this->title="notify.events";
   $this->module_category="<#LANG_SECTION_APPLICATIONS#>";
   $this->checkInstalled();
 }
