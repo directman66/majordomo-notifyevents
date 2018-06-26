@@ -1,9 +1,4 @@
 
- [#if VIEW_MODE="search_yandex_tts" || VIEW_MODE=""#]
-
-[#if OK#]
-   <div class="alert alert-success"><#LANG_DATA_SAVED#></div>
-[#endif OK#]
 
  
 <!-- table zwave_devices search -->
@@ -11,7 +6,7 @@
 <form action="?" method="post" enctype="multipart/form-data" name="frmEdit" class="form-horizontal">
 <fieldset>
 <div class="form-group">
- <label class="control-label"> API key: (*) </label>
+ <label class="control-label"> API Url: (*) </label>
  <div class="col-lg-6"><input type="text" class="form-control" name="access_key" value="[#ACCESS_KEY#]" class="input"></div>
 </div>
 
