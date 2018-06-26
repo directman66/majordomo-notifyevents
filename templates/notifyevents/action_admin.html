@@ -1,0 +1,12 @@
+
+
+
+<div>
+<img src="../img/modules/notifyevents.png"  >
+	 <ul class="nav nav-tabs">
+
+<li [#if TAB=="" || TAB=="config" #] class="active" [#endif#]><a href="?data_source=<#DATA_SOURCE#>&view_mode=&id=<#ID#>&tab=config">Настройки</a> </li>
+<li [#if TAB=="help" #] class="active" [#endif#]><a href="?view_mode=<#VIEW_MODE#>&tab=help">Help</a> </li>	
+</ul>
+[#if TAB="config" || TAB==""#] [#inc config.html#] [#endif#]
+[#if TAB="help"#] [#inc help.html#] [#endif#]
