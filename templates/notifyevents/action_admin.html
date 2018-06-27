@@ -5,7 +5,7 @@
 <a href="https://notify.events/"> <img src="../img/modules/notifyevents.png"   height="42" width="42" > Notify.Events</a>
 	 <ul class="nav nav-tabs">
 
-<li [#if TAB=="" || TAB=="config" #] class="active" [#endif#]><a href="?data_source=<#DATA_SOURCE#>&view_mode=&id=<#ID#>&tab=config">Настройки</a> </li>
+<li [#if TAB=="" || TAB=="config" #] class="active" [#endif#]><a href="?data_source=<#DATA_SOURCE#>&view_mode=<#VIEW_MODE#>&id=<#ID#>&tab=config">Настройки</a> </li>
 <li [#if TAB=="help" #] class="active" [#endif#]><a href="?view_mode=<#VIEW_MODE#>&tab=help">Help</a> </li>	
 </ul>
 [#if TAB="config" || TAB==""#] [#inc config.html#] [#endif#]
