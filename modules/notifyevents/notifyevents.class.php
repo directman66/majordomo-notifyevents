@@ -152,15 +152,21 @@ function checkSettings() {
  // Здесь задаются нужные нам параметры - пример взят из календаря, как раз есть текстбокс и радиобуттон 
   $settings=array(
    array(
-    'NAME'=>'APP_CALENDAR_SOONLIMIT', 
-    'TITLE'=>'Days to show in "soon" section', 
+    'NAME'=>'NOTIFYEVENTS_APIURL', 
+    'TITLE'=>'APIURL', 
     'TYPE'=>'text',
     'DEFAULT'=>'14'
     ),
+	  
+'NAME'=>'NOTIFYEVENTS_MSGLEVEL', 
+    'TITLE'=>'MSGLEVEL', 
+    'TYPE'=>'text',
+    'DEFAULT'=>'2'
+    ),	  
 
    array(
-    'NAME'=>'APP_CALENDAR_SHOWCALENDAR', 
-    'TITLE'=>'Показывать календарь в Делах и Событиях',
+    'NAME'=>'NOTIFYEVENTS_ENABLE', 
+    'TITLE'=>'Enable',
     'TYPE'=>'yesno',
     'DEFAULT'=>'1'
     )
