@@ -157,7 +157,7 @@ function checkSettings() {
     'TYPE'=>'text',
     'DEFAULT'=>'14'
     ),
-	  
+   array(	  
 'NAME'=>'NOTIFYEVENTS_MSGLEVEL', 
     'TITLE'=>'MSGLEVEL', 
     'TYPE'=>'text',
