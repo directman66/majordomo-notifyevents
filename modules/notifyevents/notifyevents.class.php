@@ -100,6 +100,7 @@ function run() {
   $out['ACTION']=$this->action;
   $out['TAB']=$this->tab;
   $this->data=$out;
+  $this->checkSettings();	
   $p=new parser(DIR_TEMPLATES.$this->name."/".$this->name.".html", $this->data, $this);
   $this->result=$p->result;
 }
@@ -146,6 +147,48 @@ function admin(&$out) {
 function usual(&$out) {
  $this->admin($out);
 }
+function checkSettings() {
+
+ // Здесь задаются нужные нам параметры - пример взят из календаря, как раз есть текстбокс и радиобуттон 
+  $settings=array(
+   array(
+    'NAME'=>'APP_CALENDAR_SOONLIMIT', 
+    'TITLE'=>'Days to show in "soon" section', 
+    'TYPE'=>'text',
+    'DEFAULT'=>'14'
+    ),
+
+   array(
+    'NAME'=>'APP_CALENDAR_SHOWCALENDAR', 
+    'TITLE'=>'Показывать календарь в Делах и Событиях',
+    'TYPE'=>'yesno',
+    'DEFAULT'=>'1'
+    )
+
+
+   );
+
+/*
+   foreach($settings as $k=>$v) {
+    $rec=SQLSelectOne("SELECT ID FROM settings WHERE NAME='".$v['NAME']."'");
+    if (!$rec['ID']) {
+     $rec['NAME']=$v['NAME'];
+     $rec['VALUE']=$v['DEFAULT'];
+     $rec['DEFAULTVALUE']=$v['DEFAULT'];
+     $rec['TITLE']=$v['TITLE'];
+     $rec['TYPE']=$v['TYPE'];
+     $rec['DATA']=$v['DATA'];
+     $rec['ID']=SQLInsert('settings', $rec);
+     Define('SETTINGS_'.$rec['NAME'], $v['DEFAULT']);
+    }
+   }
+
+ }	
+ */
+	
+	
+}
+	
  function processSubscription($event, &$details) {
   $this->getConfig();
   if ($event=='SAY' && !$this->config['DISABLED'] && !$details['ignoreVoice']) {
