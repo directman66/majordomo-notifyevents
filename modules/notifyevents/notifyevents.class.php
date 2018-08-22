@@ -155,7 +155,7 @@ function checkSettings() {
     'NAME'=>'NOTIFYEVENTS_APIURL', 
     'TITLE'=>'APIURL', 
     'TYPE'=>'text',
-    'DEFAULT'=>'14'
+    'DEFAULT'=>'https://api.notify.events/xxxxxx'
     ),
    array(	  
 'NAME'=>'NOTIFYEVENTS_MSGLEVEL', 
